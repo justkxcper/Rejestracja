@@ -1,19 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/registration"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#428C78"
+            android:textColor="@color/white"
+            android:text="Rejestruj konto" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Podaj e-mail:"
+            android:textColor="#808080"/>
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="email" />
+
+        <TextView
+            android:id="@+id/passwordTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Podaj hasło:"
+            android:textColor="#808080"/>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/repeatPassTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Powtórz hasło:"
+            android:textColor="#808080"/>
+
+        <EditText
+            android:id="@+id/repeatPassEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50px"
+            android:text="ZATWIERDŹ"
+            android:backgroundTint="#808080" />
+
+        <TextView
+            android:id="@+id/announcementTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Witaj"
+            android:textColor="#808080"
+            android:layout_gravity="center"
+            android:layout_marginTop="20px" />
+
+    </LinearLayout>
+</LinearLayout>
